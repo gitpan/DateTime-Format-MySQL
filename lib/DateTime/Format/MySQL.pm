@@ -4,7 +4,7 @@ use strict;
 
 use vars qw ($VERSION);
 
-$VERSION = '0.03';
+$VERSION = '0.0301';
 
 use DateTime;
 use DateTime::Format::Builder
@@ -134,7 +134,9 @@ zone, because MySQL does not provide time zone information.
 =item * parse_timestamp($string)
 
 Given a value of the appropriate type, this method will return a new
-C<DateTime> object.
+C<DateTime> object.  The time zone for this object will always be the
+floating time zone, because by MySQL stores the local datetime, not
+UTC.
 
 If given an improperly formatted string, this method may die.
 
@@ -146,6 +148,8 @@ If given an improperly formatted string, this method may die.
 
 Given a C<DateTime> object, this methods returns an appropriately
 formatted string.
+
+=back
 
 =head1 SUPPORT
 

@@ -10,3 +10,5 @@ t/00load.t
 t/01format.t
 t/02parse.t
 
+
+SIGNATURE    Added here by Module::Build
