@@ -1,0 +1,12 @@
+--- #YAML:1.0
+name: DateTime-Format-MySQL
+version: 0.02
+license: perl
+distribution_type: module
+requires:
+  DateTime: 0
+  DateTime::Format::Builder: 0.25
+recommends: {}
+build_requires: {}
+conflicts: {}
+generated_by: Module::Build version 0.17
