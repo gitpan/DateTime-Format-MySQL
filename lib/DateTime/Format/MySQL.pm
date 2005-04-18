@@ -4,7 +4,7 @@ use strict;
 
 use vars qw ($VERSION);
 
-$VERSION = '0.0301';
+$VERSION = '0.04';
 
 use DateTime;
 use DateTime::Format::Builder
@@ -25,6 +25,11 @@ use DateTime::Format::Builder
             params => [ qw( year month day hour minute second ) ],
             regex  => qr/^(\d\d\d\d)(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)$/,
             extra  => { time_zone => 'floating' },
+          },
+          {
+            params => [ qw( year month day hour minute second ) ],
+            regex  => qr/^(\d{1,4})-(\d\d)-(\d\d) (\d\d):(\d\d):(\d\d)$/,
+            extra  => { time_zone => 'floating'},
           },
           { length => 12,
             params => [ qw( year month day hour minute second ) ],
