@@ -8,6 +8,7 @@ Module::Build->new
       requires     => { 'DateTime' => 0,
                         'DateTime::Format::Builder' => 0.60,
                       },
-      sign         => 1,
+      build_requires => { 'Module::Build' => 0 },
+      sign         => 0,
       create_makefile_pl => 'passthrough',
     )->create_build_script;
